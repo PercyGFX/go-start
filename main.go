@@ -1,8 +1,12 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+	"go-start/testpackage"
+)
 
 func main() {
-	fmt.Println(("Hello, World!"))
+	fmt.Println("Hello, World!")
+
+	testpackage.Test()
 }
