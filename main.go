@@ -8,5 +8,9 @@ import (
 func main() {
 	fmt.Println("Hello, World!")
 
-	testpackage.Test()
+	var name string = "Jone"
+
+
+
+	testpackage.Test(name)
 }
