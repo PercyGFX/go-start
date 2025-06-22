@@ -1,8 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"go-start/testpackage"
+	"os"
 )
 
 
@@ -18,28 +19,19 @@ func getQuotation (x float64, y float64) (ans float64, err error) {
 func main() {
 	fmt.Println("Hello, World!")
 
-	ans, err := getQuotation(10, -1)
-	if err != nil {
-		fmt.Println("Error:", err)
-	} else {
-		fmt.Println("Quotation:", ans)
-	}
+	reader := bufio.NewReader(os.Stdin)
+ fmt.Print("Enter first number: ")
 
-	var name string = "Jone"
+ number, error := reader.ReadString('\n')
 
-	pakaya := 8
-	
-	if (pakaya > 5) {
-		fmt.Println("pakaya is greater than 5")
-	} else {
-		fmt.Println("pakaya is less than or equal to 5")
-	}
-
-	for x:= 1 ; x<= 10; x++ {
-		fmt.Println(x)
-	}
+ if error != nil {
+  fmt.Println("Error reading input:", error)
+  return
+ }
+ fmt.Println("You entered:", number)
 
 
 
-	testpackage.Test(name)
+
+
 }
